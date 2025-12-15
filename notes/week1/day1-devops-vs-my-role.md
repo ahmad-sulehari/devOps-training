@@ -1,0 +1,5 @@
+My current role as an automation engineer is a part of the process of devops.
+After CI stage and in it's enchanced CD (continuous delivery/deployment) stage when builds/packages are deployed on staging env it is a best practice to run automated tests such as UI, API and load testing so that the need for manual intervention is reduced and we can achieve the principal of fast delivery with reliable quality.
+My previous role helped in achieving this automated testing process via UI, API and load tests which would run soon after new builds would be created by bamboo.
+However the current role expands far above the domain where it's the responsibility of a devops engineer to ensure that the whole software release process is automated as much as possible for fater delivery of releases to the end user.
+One common factor is keeping the end user's need in mind along with quality.
