@@ -1,0 +1,5 @@
+{
+    "UserId": "AROAYZW3535HQVYYWF73P:ahmad.sulehari@arbisoft.com",
+    "Account": "604977880911",
+    "Arn": "arn:aws:sts::604977880911:assumed-role/AWSReservedSSO_AdministratorAccess_646c93d042184b81/ahmad.sulehari@arbisoft.com"
+}
