@@ -1,0 +1,15 @@
+command used:
+find ./ -name "*.md" -exec  grep -i "DevOps" {} \;
+
+With \;: The command runs separately for each file found (e.g., if 100 files are found, the command executes 100 times).
+With +: The command runs once with a batch of multiple files appended as arguments (similar to how xargs works), which is much faster for large numbers of files.
+
+
+
+# search results:
+This is the start of my transition towards devops domain from automaiton.
+I hope to follow this training and become a job ready devops personal as soon as possible.
+Devops compliments my previous role of automation engineer as it builds on the basic concepts I have worked with.
+$ grep "devops" ./README.md
+My current role as an automation engineer is a part of the process of devops.
+However the current role expands far above the domain where it's the responsibility of a devops engineer to ensure that the whole software release process is automated as much as possible for fater delivery of releases to the end user.
