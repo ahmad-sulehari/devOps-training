@@ -96,6 +96,8 @@ show the first 10 lines of a file on std output
 
 ## tail
 same as head but it works with end of file and same options available as head
+- an important is to use the -f flag to monitor file that are updated in real time
+
 
 ## chmod 
 This command is use to alter permission of a file or a directory
@@ -113,3 +115,12 @@ $ diff file1 file2
 $ diff -r dir1 dir2 # -r is used when comparing two directories
 
 ```
+
+## tee
+This comand allows you to split the input it receives into two streams one is the stdout and other is a file if provided to it
+
+```bash
+$ ls | tee file1.txt
+# this will show output of ls on screen as well as save it in the file given
+```
+

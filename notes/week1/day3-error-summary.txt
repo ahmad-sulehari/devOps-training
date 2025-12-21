@@ -1,0 +1,32 @@
+Command:
+    bash-5.3$ awk '/\[ERROR\]/' test.log 
+Output:
+Dec 18 12:51:05 web-prod-01 systemd[655]: [ERROR] Out of memory: Kill process 1234 (nginx)
+Dec 18 12:51:05 web-prod-01 db_service[734]: [ERROR] Failed to bind to port 80: Permission denied
+Dec 18 12:51:05 web-prod-01 nginx[3050]: [ERROR] Segmentation fault in worker process
+
+Command:
+    bash-5.3$ grep "ERROR" test.log
+Output
+Dec 18 12:51:05 web-prod-01 systemd[655]: [ERROR] Out of memory: Kill process 1234 (nginx)
+Dec 18 12:51:05 web-prod-01 db_service[734]: [ERROR] Failed to bind to port 80: Permission denied
+Dec 18 12:51:05 web-prod-01 nginx[3050]: [ERROR] Segmentation fault in worker process
+
+Printing only the summary of error
+
+bash-5.3$ awk -F ':' '/\[ERROR\]/ {print $4}' test.log 
+ [ERROR] Out of memory
+ [ERROR] Failed to bind to port 80
+ [ERROR] Segmentation fault in worker process
+bash-5.3$ awk -F ':' '/\[ERROR\]/ {print $4}' new_test.log 
+ [ERROR] Database connection lost
+ [ERROR] Failed to bind to port 80
+ [ERROR] Out of memory
+ [ERROR] Database connection lost
+ [ERROR] Database connection lost
+ [ERROR] Critical system failure
+ [ERROR] Database connection lost
+ [ERROR] Segmentation fault in worker process
+ [ERROR] Out of memory
+ [ERROR] Segmentation fault in worker process
+
