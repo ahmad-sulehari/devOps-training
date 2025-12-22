@@ -12,3 +12,7 @@
 - Create a pull request and add description as the tasks accomplished in that day
 - Review and approval of PR
 - Merge it and delete remote branch (local too optionally)
+
+## Quick Fix
+- create a branch fix/define-the-fix
+- commit with a subject and heading "fix"
