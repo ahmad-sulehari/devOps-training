@@ -44,7 +44,7 @@ if [[ -d $project_dir/$vir_env_name ]];then
 	pretty_print "virtual enviornment found and activated"
 else
 	pretty_print "unable to find a virtual enviornment \n creating a new virtual env in $project_dir/"
-	python -m venv $project_dir/$vir_env_name 1>> $LOG_FILE 2>> $ERR_FILE
+	python3 -m venv $project_dir/$vir_env_name 1>> $LOG_FILE 2>> $ERR_FILE
 	source "$project_dir/$vir_env_name/bin/activate"
 	pretty_print "virtual enviornment created and activated"
 fi
@@ -58,6 +58,14 @@ if [[ -f $project_dir/requirements.txt ]]; then
 else
 	echo "[ERROR] requirements file not present" >> $ERR_FILE
 	exit 1
+fi
+
+pretty_print "Checking pre-commit installation"
+if command -v pre-commit &> /dev/null; then
+	pretty_print "pre-commit hook already installed"
+else
+	pretty_print "Installing pre-commit hooks"
+	pre-commit install 1>> $LOG_FILE 2>> $ERR_FILE
 fi
 
 pretty_print "Setup completed successfully!"
