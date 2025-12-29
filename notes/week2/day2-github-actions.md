@@ -1,5 +1,10 @@
 # Github Actions
 
+## workflow_dispatch
+- if we add this trigger event to a workflow we can't execute the workflow from the UI until this change has been merged in the main
+- this is when this is the first time you have added a worflow dispatch event to a workflow.
+- However there are certain ways to use github api to trigger it
+
 ## needs parameter
 - is use to make a job dependend on other
 ```yaml
