@@ -5,18 +5,21 @@
 - list all containers running and stopped with command
 `docker ps -a` or only running ones with `docker ps`
 
-- restarted container with command `docker start -a containerid`
-- - -a for attaching terminal to the container
+## restarted container with command
+ `docker start -a containerid`
+- -a for attaching terminal to the container
 
+## copying files
 - installed python, pip and copied files from local machine to docker container
 `cp /path/to/files container-name:/path/to/destination`
 
+## creating image from a container
 - saved the updated container as a new image
 `docker commit container-name new-image-name`
 
 ![docker container and images](../screenshots/docker%20container%20and%20images.png)
 
-- clean up of stopped containers
+## clean up of stopped containers
 
 ![removed stopped containers](../screenshots/removed%20docker%20containers.png)
 
