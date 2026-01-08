@@ -49,3 +49,10 @@
 - docker stop : to stop the running container
 - docker rm : to remove the container
 - docker rmi: to remove the image
+
+
+## clean up of multiple container or images
+
+- docker stop $(docker ps -a -q)
+- docker rm $(docker ps -a -q)
+- docker rmi -f $(docker images -q)
