@@ -1,3 +1,14 @@
+## to run all services in a compose file
+`docker compose up`
+
+- -d flag to run in background
+- <service-name> to run a specific service
+
+## stop and remove service containers
+
+`docker compose stop`
+`docker compose down`
+
 ## to inspect a crashing container
 
 `$ docker compose run --rm <service-name> bash`
